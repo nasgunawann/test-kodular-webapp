@@ -42,9 +42,9 @@ export default function LoginScreen({ onLoginSuccess, onLoginDemoEmpty }: LoginS
           <img src="/assets/tirta.png" alt="PDAM Tirtanadi Logo" className="w-full h-full object-contain rounded-full" />
         </div>
         <div className="space-y-0.5">
-          <h1 className="font-display font-extrabold text-xl text-primary tracking-tight">PDAM Tirtanadi</h1>
+          <h1 className="font-display font-extrabold text-xl text-primary tracking-tight">SI-PERMATA</h1>
           <p className="text-[9px] uppercase font-bold tracking-widest text-slate-400 max-w-[280px]">
-            Layanan Air Minum Kebanggaan Sumatera Utara
+            Sistem Informasi Permohonan Meteran Air
           </p>
         </div>
       </div>
