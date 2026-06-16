@@ -109,7 +109,7 @@ export default function StatusScreen({ submissions, onOpenHelp }: StatusScreenPr
           </div>
 
           <p className="text-xs font-bold text-slate-700 leading-snug">
-            📌 Detail Pengajuan: {activeTrackedSub.type} ({activeTrackedSub.subType})
+            Detail Pengajuan: {activeTrackedSub.type}
           </p>
 
           {/* Stepper timeline */}
@@ -198,7 +198,7 @@ export default function StatusScreen({ submissions, onOpenHelp }: StatusScreenPr
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-slate-800 leading-none">{sub.type} - {sub.subType}</span>
+                      <span className="text-xs font-bold text-slate-800 leading-none">{sub.type}</span>
                       <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold leading-none ${
                         sub.status === 'SELESAI'
                           ? 'bg-emerald-50 text-emerald-700'

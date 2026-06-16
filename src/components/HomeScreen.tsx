@@ -59,7 +59,7 @@ export default function HomeScreen({
                 ? 'bg-emerald-50 text-emerald-600 border border-emerald-100'
                 : 'bg-red-50 text-red-600 border border-red-100'
             }`}>
-              🚗 {latestSubmission.status}
+              {latestSubmission.status}
             </span>
           </div>
 
@@ -69,7 +69,7 @@ export default function HomeScreen({
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-sm font-bold text-slate-800 truncate leading-snug">
-                {latestSubmission.type} - {latestSubmission.subType}
+                {latestSubmission.type}
               </h3>
               <p className="text-[11px] text-slate-400 mt-0.5 font-medium">
                 Update: {latestSubmission.updateTime}
