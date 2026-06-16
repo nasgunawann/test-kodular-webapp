@@ -1,4 +1,4 @@
-import { Droplet, Bell } from 'lucide-react';
+import { Bell } from 'lucide-react';
 
 interface HeaderProps {
   title: string;
@@ -10,8 +10,8 @@ export default function Header({ title, onOpenNotifications, unreadCount }: Head
   return (
     <header className="fixed top-0 left-0 right-0 z-40 mx-auto max-w-md h-16 bg-white border-b border-surface-container/60 shadow-sm flex items-center justify-between px-4 transition-colors">
       <div className="flex items-center gap-2.5">
-        <div className="bg-primary-container/10 p-1.5 rounded-lg flex items-center justify-center">
-          <Droplet className="w-6 h-6 text-primary" fill="currentColor" />
+        <div className="w-8 h-8 rounded-full flex items-center justify-center p-0.5 overflow-hidden border border-slate-100 bg-white">
+          <img src="/assets/tirta.png" alt="PDAM Tirtanadi Logo" className="w-full h-full object-contain rounded-full" />
         </div>
         <h1 className="font-semibold text-lg text-primary tracking-tight select-none">
           {title}

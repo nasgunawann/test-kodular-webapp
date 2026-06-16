@@ -28,7 +28,8 @@ import {
   payBill,
   markNotificationAsRead,
   markAllNotificationsAsRead,
-  resetLocalStorage
+  resetLocalStorage,
+  initializeEmptyAccount
 } from './utils/storage';
 
 import { UserProfile, Submission, Bill, Notification } from './types';
@@ -178,8 +179,24 @@ export default function App() {
     }
   };
 
+  const handleLoginDemoEmpty = () => {
+    initializeEmptyAccount();
+    setIsLoggedInState(true);
+    // Reload state triggers
+    setProfile(getProfile());
+    setSubmissions(getSubmissions());
+    setBills(getBills());
+    setNotifications(getNotifications());
+  };
+
   if (!isLoggedIn || !profile) {
-    return <LoginScreen onLoginSuccess={handleLoginSuccess} />;
+    return (
+      <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center py-0 sm:py-6 md:py-10 bg-radial from-slate-800 to-slate-950 font-sans text-slate-800 antialiased overflow-x-hidden">
+        <div className="relative w-full sm:max-w-md sm:h-[880px] bg-slate-50 sm:rounded-[36px] sm:shadow-2xl sm:border-[10px] sm:border-slate-800 overflow-hidden flex flex-col flex-1 sm:flex-initial">
+          <LoginScreen onLoginSuccess={handleLoginSuccess} onLoginDemoEmpty={handleLoginDemoEmpty} />
+        </div>
+      </div>
+    );
   }
 
   return (

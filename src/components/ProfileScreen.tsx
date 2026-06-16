@@ -148,19 +148,6 @@ export default function ProfileScreen({
 
         <div className="bg-white rounded-2xl border border-slate-100 shadow-[0px_4px_16px_rgba(0,0,0,0.02)] overflow-hidden">
           
-          {/* Menu item 1: Tagihan Saya */}
-          <button
-            id="profile-menu-bills"
-            onClick={onOpenBills}
-            className="w-full flex items-center justify-between p-4 border-b border-slate-50 hover:bg-slate-50/50 transition-colors cursor-pointer select-none"
-          >
-            <div className="flex items-center gap-3">
-              <Receipt className="w-4.5 h-4.5 text-slate-400" />
-              <span className="text-xs font-semibold text-slate-700">Tagihan Saya</span>
-            </div>
-            <ChevronRight className="w-4 h-4 text-slate-300" />
-          </button>
-
           {/* Menu item 2: Riwayat Pengajuan */}
           <button
             id="profile-menu-submissions"

@@ -102,58 +102,6 @@ export default function HomeScreen({
         </section>
       )}
 
-      {/* Services Grid (Layanan Kami) */}
-      <section className="space-y-3">
-        <h3 className="text-xs font-bold text-slate-800 uppercase tracking-widest px-1">
-          Layanan Kami
-        </h3>
-        <div className="grid grid-cols-3 gap-3">
-          
-          {/* Layanan 1: Tagihan Air */}
-          <button
-            id="layanan-tagihan-air"
-            onClick={onOpenBills}
-            className="bg-white rounded-2xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center shadow-3xs cursor-pointer hover:border-primary/10 hover:shadow-xs hover:-translate-y-0.5 transition-all active:scale-95 duration-150"
-          >
-            <div className="w-11 h-11 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-2.5">
-              <Receipt className="w-5.5 h-5.5" />
-            </div>
-            <span className="text-[11px] font-bold text-slate-700 tracking-tight">
-              Tagihan Air
-            </span>
-          </button>
-
-          {/* Layanan 2: Pasang Meter */}
-          <button
-            id="layanan-pasang-meter"
-            onClick={handleLayananPasangMeter}
-            className="bg-white rounded-2xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center shadow-3xs cursor-pointer hover:border-primary/10 hover:shadow-xs hover:-translate-y-0.5 transition-all active:scale-95 duration-150"
-          >
-            <div className="w-11 h-11 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-2.5">
-              <Gauge className="w-5.5 h-5.5" />
-            </div>
-            <span className="text-[11px] font-bold text-slate-700 tracking-tight">
-              Pasang Meter
-            </span>
-          </button>
-
-          {/* Layanan 3: Layanan CS */}
-          <button
-            id="layanan-hubungi-cs"
-            onClick={onOpenHelp}
-            className="bg-white rounded-2xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center shadow-3xs cursor-pointer hover:border-primary/10 hover:shadow-xs hover:-translate-y-0.5 transition-all active:scale-95 duration-150"
-          >
-            <div className="w-11 h-11 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-2.5">
-              <Headset className="w-5.5 h-5.5" />
-            </div>
-            <span className="text-[11px] font-bold text-slate-700 tracking-tight">
-              Layanan CS
-            </span>
-          </button>
-
-        </div>
-      </section>
-
       {/* Buat Pengajuan Baru Promo Banner card */}
       <section>
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-primary-container text-white p-5 shadow-sm">
@@ -182,6 +130,44 @@ export default function HomeScreen({
               Mulai Sekarang
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Services Grid (Layanan Kami) */}
+      <section className="space-y-3">
+        <h3 className="text-xs font-bold text-slate-800 uppercase tracking-widest px-1">
+          Layanan Kami
+        </h3>
+        <div className="grid grid-cols-2 gap-3">
+          
+          {/* Layanan 1: Pasang Meter */}
+          <button
+            id="layanan-pasang-meter"
+            onClick={handleLayananPasangMeter}
+            className="bg-white rounded-2xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center shadow-3xs cursor-pointer hover:border-primary/10 hover:shadow-xs hover:-translate-y-0.5 transition-all active:scale-95 duration-150"
+          >
+            <div className="w-11 h-11 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-2.5">
+              <Gauge className="w-5.5 h-5.5" />
+            </div>
+            <span className="text-[11px] font-bold text-slate-700 tracking-tight">
+              Pasang Meter
+            </span>
+          </button>
+
+          {/* Layanan 2: Layanan CS */}
+          <button
+            id="layanan-hubungi-cs"
+            onClick={onOpenHelp}
+            className="bg-white rounded-2xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center shadow-3xs cursor-pointer hover:border-primary/10 hover:shadow-xs hover:-translate-y-0.5 transition-all active:scale-95 duration-150"
+          >
+            <div className="w-11 h-11 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-2.5">
+              <Headset className="w-5.5 h-5.5" />
+            </div>
+            <span className="text-[11px] font-bold text-slate-700 tracking-tight">
+              Layanan CS
+            </span>
+          </button>
+
         </div>
       </section>
     </div>

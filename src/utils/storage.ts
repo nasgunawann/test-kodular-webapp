@@ -261,8 +261,8 @@ export function getIsLoggedIn(): boolean {
   // Default to logged in as Ahmad Ridwan so the user lands straight into the main app dashboard!
   // but can easily test log out.
   if (data === null) {
-    localStorage.setItem(KEYS.IS_LOGGED_IN, 'true');
-    return true;
+    localStorage.setItem(KEYS.IS_LOGGED_IN, 'false');
+    return false;
   }
   return data === 'true';
 }
@@ -276,5 +276,29 @@ export function resetLocalStorage(): void {
   localStorage.setItem(KEYS.SUBMISSIONS, JSON.stringify(INITIAL_SUBMISSIONS));
   localStorage.setItem(KEYS.BILLS, JSON.stringify(INITIAL_BILLS));
   localStorage.setItem(KEYS.NOTIFICATIONS, JSON.stringify(INITIAL_NOTIFICATIONS));
+  localStorage.setItem(KEYS.IS_LOGGED_IN, 'false');
+}
+
+export function initializeEmptyAccount(): void {
+  const newProfile: UserProfile = {
+    idPelanggan: '1234',
+    name: 'Cindy Anggriani',
+    email: 'cindyagrn04@email.com',
+    phone: '',
+    address: '',
+    avatar: ''
+  };
+  localStorage.setItem(KEYS.PROFILE, JSON.stringify(newProfile));
+  localStorage.setItem(KEYS.SUBMISSIONS, JSON.stringify([]));
+  localStorage.setItem(KEYS.BILLS, JSON.stringify([]));
+  localStorage.setItem(KEYS.NOTIFICATIONS, JSON.stringify([
+    {
+      id: 'NOTIF-WELCOME',
+      title: 'Selamat Datang!',
+      message: 'Selamat bergabung di aplikasi PDAM Tirtanadi Digital. Silakan isi form pengajuan untuk memasang sambungan baru.',
+      time: 'Baru saja',
+      isRead: false
+    }
+  ]));
   localStorage.setItem(KEYS.IS_LOGGED_IN, 'true');
 }
