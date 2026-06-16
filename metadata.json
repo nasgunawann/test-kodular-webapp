@@ -1,0 +1,6 @@
+{
+  "name": "PDAM Tirtanadi Digital",
+  "description": "A comprehensive mobile web application for PDAM Tirtanadi customers in Medan, Sumatera Utara, allowing users to view dashboard home, submit meter requests, track processing status, and edit profiles, with localStorage data persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
